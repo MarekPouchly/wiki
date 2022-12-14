@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>{{entry}} page doesn't exist!</h1>
+    <h3>Did you mean some of these below?</h3>
+
+    <ul>
+        {% for entry in entries %}
+            <li><a href="wiki/{{entry}}">{{ entry }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
